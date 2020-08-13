@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Array라는 객체에 멤버필드에는 arr 추가, fn이라는 메소드 추가
+        // 자스는 상속, 오버라이딩 개념이 없음
+        // prototype 객체마다 생기는 메모리
+        // forEach : fallback 홤수
+        Array.prototype.arr = []
+        Array.prototype.forEach2 = function(fn) {
+            for(var i=0; i<this.arr.length; i++) {
+                var item = this.arr[i]
+                fn(item)
+            }
+        }
+
+        var objArr = new Array()
+        objArr.arr = ['A', 'B', 'C', 'D']
+        objArr.forEach2(function(a) {
+            alert(a)
+        }) 
+
+    </script>
+</body>
+</html>
