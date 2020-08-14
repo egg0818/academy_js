@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <style>
+        .container {
+            width: 600px;
+            margin: 20px auto;
+            padding: 50px;
+            border: 1px solid black;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>코리아 모터스</h2>
+        <p>구매하실 차종을 선택하시오.</p>
+        <select id="car" onchange="selc(this.value)">
+            <option value="1" selected>2020 그랜져 하이브리드</option>
+            <option value="2">2020 제네시스 GV80</option>
+            <option value="3">2020 팰리세이드</option>
+            <option value="4">2020 소나타 하이브리드</option>
+            <option value="5">2019 QM6</option>
+            <option value="6">2019 K7</option>
+        </select>
+        <div id="result">
+            <img src="images/car1.png">
+        </div>
+    </div>
+    <script>
+        function selc(num) {
+            if(num==1) {
+                document.querySelector('#result').innerHTML = '<img src="images/car1.png">' + '<p>고객님은 2020 그랜져 하이브리드를 선택하셨습니다</p>'
+            } else if(num==2) {
+                document.querySelector('#result').innerHTML = '<img src="images/car2.png">' + '<p>고객님은 2020 제네시스 GV80를 선택하셨습니다</p>'
+            } else if(num==3) {
+                document.querySelector('#result').innerHTML = '<img src="images/car3.png">' + '<p>고객님은 2020 팰리세이드를 선택하셨습니다</p>'
+            } else if(num==4) {
+                document.querySelector('#result').innerHTML = '<img src="images/car4.png">' + '<p>고객님은 2020 소나타 하이브리드를 선택하셨습니다</p>'
+            } else if(num==5) {
+                document.querySelector('#result').innerHTML = '<img src="images/car5.png">' + '<p>고객님은 2019 QM6를 선택하셨습니다</p>'
+            } else if(num==6) {
+                document.querySelector('#result').innerHTML = '<img src="images/car6.png">' + '<p>고객님은 2019 K7를 선택하셨습니다</p>'
+            }
+        }
+    </script>
+</body>
+</html>

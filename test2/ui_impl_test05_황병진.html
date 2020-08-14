@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>5</title>
+        <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <style>
+            .container {
+                width: 900px;
+                margin: 50px auto;
+                padding: 20px;
+                border: 1px solid black;
+            }
+            #run {
+                width: 100px;
+                background-color: black;
+                color: cornsilk;
+            }
+            #tex {
+                color:red;
+                font-weight: bolder;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <p><img src="images/turtle.png" alt="" class="turtle"></p>
+                <p><img src="images/rabbit.png" alt="" class="rabbit"></p>
+            </div>
+            <p><button id="run">달리기 시작</button></p>
+            <div id="tex"></div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $("#run").click(function() {
+                    $(".turtle").delay(2000).animate({marginLeft:"800px"}, 10000);
+                    $(".rabbit").animate({marginLeft:"200px"}, 2000)
+                    $("#tex").append("비록 느리더라도 꾀부리지 않고 노력해야만 원하는 바를 이룰 수 있습니다")
+                })
+            })     
+        </script>
+    </body>
+</html>

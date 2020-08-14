@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <style>
+        #container{
+            width: 300px;
+            margin: 20px auto;
+            padding : 50px;
+            border : 1px solid black;
+        }
+        #pic{
+            width: 55px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2><img src='images/w3.PNG' id=pic>Web Programming!</h2><hr>
+        <input type="text" name="addtext" id="addtext">
+        <button>교과내용 추가</button>
+        <div id="d1">HTML5</div>
+        <div id="d2">CSS3</div>
+        <div id="d3">Javascript</div>
+    </div>
+    <script>
+        var i=4
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('#d' + (i-1)).append('<div id="d'+i+'">' + addtext.value+'</div>')
+                $('#d' + (i)).css("color", "blue")
+                $('#d' + (i)).css("font-weight", "bolder")
+                i++
+            })
+        })
+    </script>
+</body>
+</html>

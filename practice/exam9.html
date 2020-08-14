@@ -8,24 +8,33 @@
 <body>
     <!-- find array filter메소드 -->
     <script>
+        // Array filter 메소드 확인
+        var originArr = [3, 5, 9, 10, 23, 12, 22]
+        var result = originArr.filter(function(item) {
+            if(item % 2 == 0 ) {
+                return true
+            }
+        })
+        console.log(`result : ${result}`)
+        
         Array.prototype.arr = []
         Array.prototype.filter2 = function(fn) {
-            var myArr = []
-            for(var i=0; i<arr.length; i++) {
+            var result = []
+            for(var i=0; i<this.arr.length; i++) {
                 var item = this.arr[i]
-                var fnResult
                 if(fn(item)) {
-                    fnResult = item
+                    result.push(item)
                 }
-                myArr.push(fnResult)
             }
-            return myArr
+            return result
         }
 
-        var arr2 = []
-        arr2.arr = [1,3,5,6,9,10]
-
-        
+        var myArr = Array()
+        myArr.arr = [3, 5, 9, 10, 23, 12, 22]
+        var myResult = myArr.filter2(function(item) {
+            return item%2 == 1 
+        })
+        console.log( `myResult : ${myResult}`)
     </script>
 </body>
 </html>
